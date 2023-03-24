@@ -1,5 +1,5 @@
-import 'package:regexx/contacts.dart';
 import 'package:test/test.dart';
+import '../lib/contacts.dart';
 
 void main() {
   Map<String, List> validation = {
@@ -7,7 +7,7 @@ void main() {
 
     ///valid phone number
 
-    "+7 987 999 99 99": [isNot(null), null, null],
+    "+7 987 999 99 99": ["+79879999999", null, null],
     "+7 987 999 9999": [isNot(null), null, null],
     "+7 987 9999999": [isNot(null), null, null],
     "+7 9879999999": [isNot(null), null, null],
