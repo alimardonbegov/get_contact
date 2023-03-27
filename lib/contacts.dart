@@ -1,9 +1,7 @@
 class Contacts {
   final String text;
 
-  Contacts(this.text) {
-    getEmail();
-  }
+  Contacts(this.text);
 
   String? _phone;
   String? _email;

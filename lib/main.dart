@@ -1,7 +1,7 @@
 import 'contacts.dart';
 
 void main() {
-  final contacts = Contacts("@aaarrrgasdawdqiqejqwiejqwijeqwejj");
+  final contacts = Contacts("@aaarrrg 89870065112 ab@ab.com");
   contacts.getPhone();
   contacts.getEmail();
   contacts.getTg();

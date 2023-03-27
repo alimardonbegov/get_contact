@@ -69,7 +69,7 @@ void main() {
     "+9a 99 99": [null, null, null],
     "66 66 66": [null, null, null],
     "66": [null, null, null],
-    // "09991_12(-@)": [null, null, null],
+    "09991_12(-@)": [null, null, null],
 
     ///valid email
 
