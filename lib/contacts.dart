@@ -14,7 +14,7 @@ class Contacts {
   get tg => _tg;
 
   getPhone() {
-    RegExp phoneExp = RegExp(r"(\+?\d{1,3}[\d{2,}\.\- \(\)]{8,})");
+    RegExp phoneExp = RegExp(r"(\+?\(?\d{1,3}[\d{2,}\.\- \(\)]{8,})");
     RegExpMatch? phoneMatch = phoneExp.firstMatch(text);
     if (phoneMatch != null) {
       _phone = phoneMatch[0]!.replaceAll(RegExp(r"\s"), "");
@@ -22,13 +22,13 @@ class Contacts {
   }
 
   getEmail() {
-    RegExp emailExp = RegExp(r"\w+[.\+\-]?\w+@(\w+[\.-]){1,}\w+");
+    RegExp emailExp = RegExp(r"(\w+[.\+\-]?)*\w+@(\w+[\.-]){1,}\w+");
     RegExpMatch? emailMatch = emailExp.firstMatch(text);
     if (emailMatch != null) _email = emailMatch[0]!.replaceAll(RegExp(r"\s"), "");
   }
 
   getTg() {
-    RegExp tgExp = RegExp(r"(\B@)\w{4,31}");
+    RegExp tgExp = RegExp(r"(\B@)\w{4,}(\b[^.@]|$)");
     RegExpMatch? tgMatch = tgExp.firstMatch(text);
     if (tgMatch != null) _tg = tgMatch[0]!.replaceAll(RegExp(r"\s"), "");
   }
