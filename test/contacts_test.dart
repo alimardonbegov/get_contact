@@ -105,6 +105,18 @@ void main() {
 
     "    @ aaarrrg": [null, null, null],
     "    @aarrr@gaa       ": [null, null, null],
+
+    ///valid phone, email, telegram
+    "  ab@ab.com  +7 987 999 99 99  @abbgg  ": ["+79879999999", "ab@ab.com", "@abbgg"],
+
+    ///valid phone, email
+    "+7 987 999 99 99 ab@ab.com ": ["+79879999999", "ab@ab.com", null],
+
+    ///valid phone, telegram
+    " @abbgg  +7 987 999 99 99  ": ["+79879999999", null, "@abbgg"],
+
+    ///valid email, telegram
+    "  @abbgg  ab@ab.com  ": [null, "ab@ab.com", "@abbgg"],
   };
 
   test('Field epmty returns null', () {
